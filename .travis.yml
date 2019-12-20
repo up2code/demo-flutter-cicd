@@ -29,9 +29,6 @@ matrix:
         - flutter doctor -v
         - flutter test --coverage --coverage-path=lcov.info
 
-      #after_success:
-        #- bash <(curl -s https://codecov.io/bash)
-
     # Building an APK.
     - env: JOB=APK
       os: linux

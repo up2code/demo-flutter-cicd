@@ -91,4 +91,4 @@ matrix:
         - flutter doctor -v
 
       script:
-        - flutter build ios --no-codesign
+        - flutter build ios --release --no-codesign

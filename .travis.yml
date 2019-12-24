@@ -77,6 +77,10 @@ matrix:
       os: osx
       language: objective-c
       osx_image: xcode10.3
+      before_install:
+        - gem install cocoapods
+        - gem update concurrent-ruby
+        - pod setup
       before_script:
         - pip3 install six
         - brew update
@@ -91,4 +95,5 @@ matrix:
         - flutter doctor -v
 
       script:
+        - pod lib lint
         - flutter build ios --release --no-codesign

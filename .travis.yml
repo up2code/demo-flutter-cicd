@@ -76,12 +76,7 @@ matrix:
     - env: JOB=IPA
       os: osx
       language: objective-c
-      osx_image: xcode10.3
-      before_install:
-        - gem install bundler
-        - gem install cocoapods
-        - gem update concurrent-ruby
-        - pod setup
+      osx_image: xcode11.3
       before_script:
         - pip3 install six
         - brew update
@@ -96,5 +91,4 @@ matrix:
         - flutter doctor -v
 
       script:
-        - pod lib lint
         - flutter build ios --release --no-codesign

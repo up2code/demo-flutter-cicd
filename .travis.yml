@@ -76,7 +76,7 @@ matrix:
     - env: JOB=IPA
       os: osx
       language: generic
-      osx_image: xcode8.3
+      osx_image: xcode11.3
       before_script:
         - pip3 install six
         - brew update
@@ -86,6 +86,7 @@ matrix:
         - git clone --branch v1.9.1+hotfix.4 https://github.com/flutter/flutter.git
         - export PATH=`pwd`/flutter/bin:`pwd`/flutter/bin/cache/dart-sdk/bin:$PATH
         - flutter doctor -v
+        - pod --version
 
       script:
         - flutter build ios --no-codesign

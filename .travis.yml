@@ -75,7 +75,7 @@ matrix:
     # Building an IPA.
     - env: JOB=IPA
       os: osx
-      language: generic
+      language: objective-c
       osx_image: xcode10.3
       before_script:
         - pip3 install six
@@ -91,4 +91,4 @@ matrix:
         - flutter doctor -v
 
       script:
-        - flutter build ios
+        - flutter build ios --release --no-codesign

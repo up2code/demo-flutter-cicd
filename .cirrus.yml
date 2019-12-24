@@ -1,0 +1,8 @@
+osx_instance:
+  image: mojave-xcode
+
+task:
+  matrix:
+    - name: Test
+      test_script: flutter test_script
+    - name: Android

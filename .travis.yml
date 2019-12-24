@@ -78,6 +78,7 @@ matrix:
       language: objective-c
       osx_image: xcode10.3
       before_install:
+        - gem install bundler
         - gem install cocoapods
         - gem update concurrent-ruby
         - pod setup

@@ -75,14 +75,11 @@ matrix:
     # Building an IPA.
     - env: JOB=IPA
       os: osx
-      language: objective-c
-      osx_image: xcode11.3
+      language: generic
+      osx_image: xcode8.3
       before_script:
         - pip3 install six
         - brew update
-        - brew install --HEAD usbmuxd
-        - brew unlink usbmuxd
-        - brew link usbmuxd
         - brew install --HEAD libimobiledevice
         - brew install ideviceinstaller
         - brew install ios-deploy
@@ -91,4 +88,4 @@ matrix:
         - flutter doctor -v
 
       script:
-        - flutter build ios --release --no-codesign
+        - flutter build ios --no-codesign

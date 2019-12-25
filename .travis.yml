@@ -85,6 +85,7 @@ matrix:
         - brew install ios-deploy
         - git clone --branch v1.9.1+hotfix.4 https://github.com/flutter/flutter.git
         - export PATH=`pwd`/flutter/bin:`pwd`/flutter/bin/cache/dart-sdk/bin:$PATH
+        - sudo gem list cocoapods
         - sudo gem uninstall cocoapods
         - sudo gem uninstall cocoapods-deintegrate
         - sudo gem uninstall cocoapods-downloader
